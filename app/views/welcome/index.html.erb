@@ -1,0 +1,27 @@
+<div class="wrapper wrapper_padding clearfix">
+  <div class="col-1 about homepage_content">
+    <h2>About</h2>
+    <hr>
+    <p>I'm a designer &amp; developer living in Castle Rock, Colorado.</p>
+    <p>I spend my days as a senior graphic designer for Arrow Electronics and my side hustles include running a <a href="http://whiteoakhammocks.com">hammock company</a>, a <a href="http://alpineapparel.co">screen printing company</a>, and a <a href="http://ocoeecreative.com">web agency</a>.</p>
+    <p>You can find me on Twitter, Instagram, Facebook, and blogging here about what I'm learning in business and development. I'm also sharing some design work on Dribbble and some dev work on Github.</p>
+  </div>
+  <div class="col-2 homepage_content">
+    <h2>Articles</h2>
+    <hr>
+    <% @posts.each do |post| %>
+    <h3><%= link_to post.title, post %></h3>
+    <p class="date"><%= post.created_at.strftime("%A, %b, %d") %></p>
+    <% end %>
+  </div>
+  <div class="col-3 homepage_content">
+    <h2>Projects</h2>
+    <hr>
+    <h3><a href="#">Alpine Apparel Company</a></h3>
+    <p class="date">Wednesday, February 1st</p>
+    <h3><a href="#">White Oak Hammocks</a></h3>
+    <p class="date">Tuesday, January 31st</p>
+    <h3><a href="#">Ocoee Creative</a></h3>
+    <p class="date">Monday, January 30th</p>
+  </div>
+</div>
