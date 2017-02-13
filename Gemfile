@@ -36,6 +36,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'pygments.rb', '~> 1.1', '>= 1.1.1'
 gem 'redcarpet', '~> 3.4'
+gem 'friendly_id', '~> 5.2'
 
 
 
