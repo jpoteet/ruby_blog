@@ -39,6 +39,7 @@ gem 'redcarpet', '~> 3.4'
 gem 'friendly_id', '~> 5.2'
 gem 'will_paginate', '~> 3.1', '>= 3.1.5'
 gem 'mail_form', '~> 1.6'
+gem 'mailgunner', '~> 2.4'
 
 
 

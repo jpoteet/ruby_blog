@@ -85,14 +85,14 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # config.action_mailer.default_url_options = { host: 'https://immense-ocean-48880.herokuapp.com' }
-  config.action_mailer.delivery_method = :smtp
-
-  config.action_mailer.smtp_settings = {
-    :port           => ENV['MAILGUN_SMTP_PORT'],
-    :address        => ENV['MAILGUN_SMTP_SERVER'],
-    :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
-    :password       => ENV['MAILGUN_SMTP_PASSWORD'],
-    :domain         => 'immense-ocean-48880.heroku.com',
-    :authentication => :plain,
-  }
+  config.action_mailer.delivery_method = :mailgun
+  ActionMailer::Base.smtp_settings = {
+  :port           => ENV['MAILGUN_SMTP_PORT'],
+  :address        => ENV['MAILGUN_SMTP_SERVER'],
+  :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+  :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+  :domain         => 'immense-ocean-48880.herokuapp.com',
+  :authentication => :plain,
+}
+ActionMailer::Base.delivery_method = :smtp
 end
